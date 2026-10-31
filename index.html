@@ -1,149 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduLance | Connect with Expert Academic Freelancers</title>
-    <!-- Tailwind CSS CDN for modern styling -->
-    <script src="https://tailwindcss.com"></script>
-    <!-- FontAwesome for clean iconography -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ExciTech Science Academy – Education Services</title>
+<meta name="description" content="Personal tutoring, exam coaching and career guidance for students of all ages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6f1e4; --cream-deep:#ece4d0;
+  --sage:#aab99b; --sage-light:#dfe6d3; --sage-mid:#8fa17f;
+  --olive:#5d6a2b; --olive-deep:#363d1b; --ink:#262b14;
+  --line:rgba(54,61,27,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',system-ui,sans-serif;font-weight:400;color:var(--ink);background:var(--cream);line-height:1.75;font-size:17px}
+h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.04em;line-height:1.02;color:var(--olive-deep)}
+a{color:var(--olive)}
+:focus-visible{outline:3px solid var(--olive);outline-offset:4px}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:1px solid var(--line)}
+.bar{max-width:1180px;margin:auto;padding:16px 28px;display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;justify-content:space-between}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.08em;text-decoration:none;color:var(--olive-deep)}
+.logo small{font-family:'Lato',sans-serif;font-weight:300;font-size:.8rem;letter-spacing:.18em;margin-left:10px;color:var(--olive)}
+nav{display:flex;flex-wrap:wrap;gap:6px 28px}
+nav button{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.1em;background:none;border:0;border-bottom:2px solid transparent;color:var(--olive-deep);padding:4px 0;cursor:pointer;transition:border-color .2s,color .2s}
+nav button:hover{color:var(--olive)}
+nav button[aria-selected="true"]{border-bottom-color:var(--olive)}
+
+main{max-width:1180px;margin:auto;padding:0 28px 80px}
+section.page{display:none}
+section.page.active{display:block}
+.page-head{padding:64px 0 36px;border-bottom:1px solid var(--line);margin-bottom:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;align-items:end}
+.page-head h2{font-size:clamp(3rem,8vw,5.5rem)}
+.page-head p{font-weight:300;font-size:1.15rem;max-width:46ch}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:0;margin:48px 0 64px;border:1px solid var(--line)}
+.hero-copy{padding:56px 48px}
+.hero h1{font-size:clamp(3.4rem,9vw,7rem);margin-bottom:22px}
+.hero p{font-weight:300;font-size:1.2rem;max-width:44ch;margin-bottom:32px}
+.btn{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.12em;text-decoration:none;padding:12px 32px;background:var(--olive);color:var(--cream);border:1px solid var(--olive);cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--olive-deep);border-color:var(--olive-deep)}
+.btn.ghost{background:transparent;color:var(--olive-deep);border-color:var(--olive-deep);margin-left:10px}
+.btn.ghost:hover{background:var(--olive-deep);color:var(--cream)}
+.hero-side{background:var(--olive-deep);color:var(--cream);padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.hero-side h3{color:var(--sage);font-size:1.5rem}
+.hero-side ul{list-style:none}
+.hero-side li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(246,241,228,.2);font-weight:300}
+.hero-side li b{font-weight:700}
+.hero-side .big{font-family:'Bebas Neue',sans-serif;font-size:4.2rem;line-height:1;color:var(--sage-light)}
+.hero-side .big span{display:block;font-family:'Lato',sans-serif;font-size:.9rem;font-weight:300;letter-spacing:.04em;color:var(--cream)}
+
+/* Shared blocks */
+.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:72px;border-top:1px solid var(--line)}
+.numbers div{padding:26px 24px 8px 0}
+.numbers b{display:block;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:3.4rem;line-height:1;color:var(--olive)}
+.numbers span{font-weight:300}
+.split{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;margin-bottom:72px}
+.split h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+.rows{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1.1fr 2fr;gap:8px 32px;padding:24px 0;border-bottom:1px solid var(--line)}
+.row h3{font-size:1.8rem}
+.row small{display:block;font-family:'Lato',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.05em;color:var(--olive);margin-top:4px}
+.row p{font-weight:300}
+.panels{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.panel{padding:34px 30px;grid-column:span 2}
+.panel.wide{grid-column:span 3}
+.panel h3{font-size:2rem;margin-bottom:10px}
+.panel p{font-weight:300}
+.p-sage{background:var(--sage-light)} .p-mid{background:var(--sage)} .p-olive{background:var(--olive);color:var(--cream)} .p-olive h3{color:var(--cream)} .p-cream{background:var(--cream-deep)}
+.statement{background:var(--olive-deep);color:var(--cream);padding:64px 48px;margin-top:72px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.statement h2{color:var(--cream);font-size:clamp(2.4rem,5vw,4rem)}
+.statement p{font-weight:300;margin-bottom:20px}
+.statement .btn{background:var(--sage);color:var(--olive-deep);border-color:var(--sage)}
+.statement .btn:hover{background:var(--cream);border-color:var(--cream)}
+blockquote{border-left:3px solid var(--olive);padding:6px 0 6px 28px;font-weight:300;font-style:italic;font-size:1.35rem;line-height:1.55}
+blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:.95rem}
+ul.ticks{list-style:none}
+ul.ticks li{padding:10px 0 10px 28px;border-bottom:1px solid var(--line);position:relative;font-weight:300}
+ul.ticks li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:2px;background:var(--olive)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{cursor:pointer;font-weight:700}
+details p{font-weight:300;margin-top:8px}
+.rows a{font-weight:700}
+
+/* Form */
+form{display:grid;gap:18px}
+label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+input,select,textarea{font:inherit;font-weight:400;padding:13px 14px;border:1px solid var(--olive-deep);background:#fbf8ef;color:var(--ink);border-radius:0}
+textarea{min-height:130px;resize:vertical}
+#formMsg{font-weight:700;color:var(--olive);min-height:1.5em}
+.info{background:var(--sage-light);padding:32px}
+.info h3{font-size:1.9rem;margin-bottom:8px}
+.info + .info{margin-top:20px;background:var(--cream-deep)}
+
+footer{background:var(--olive-deep);color:var(--sage-light);text-align:center;padding:32px 28px;font-weight:300;font-size:.95rem}
+footer b{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.1em;color:var(--cream);display:block}
+
+@media (max-width:860px){
+  .hero,.split,.statement,.page-head{grid-template-columns:1fr}
+  .hero-copy{padding:36px 26px}
+  .row{grid-template-columns:1fr}
+  .panels{grid-template-columns:1fr}
+  .panel,.panel.wide{grid-column:auto}
+  .btn.ghost{margin:12px 0 0}
+  .page-head{padding-top:40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body>
 
-    <!-- NAVIGATION BAR -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <!-- Logo -->
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-graduation-cap text-indigo-600 text-3xl"></i>
-                <span class="text-xl font-bold text-gray-900 tracking-tight">EduLance</span>
-            </div>
-            
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex space-x-8 font-medium">
-                <a href="#browse" class="text-gray-600 hover:text-indigo-600 transition">Find Experts</a>
-                <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 transition">How it Works</a>
-                <a href="#become-freelancer" class="text-gray-600 hover:text-indigo-600 transition">Become a Tutor</a>
-            </nav>
+<header>
+  <div class="bar">
+    <a class="logo" href="#home">Olive &amp; Oak<small>ACADEMY</small></a>
+    <nav role="tablist" aria-label="Main pages">
+      <button role="tab" data-tab="home">Home</button>
+      <button role="tab" data-tab="about">About</button>
+      <button role="tab" data-tab="courses">Courses</button>
+      <button role="tab" data-tab="services">Services</button>
+      <button role="tab" data-tab="resources">Resources</button>
+      <button role="tab" data-tab="contact">Contact</button>
+    </nav>
+  </div>
+</header>
 
-            <!-- Authentication Buttons -->
-            <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition">Sign In</a>
-                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium shadow-sm transition">Join Free</a>
-            </div>
-        </div>
-    </header>
+<main>
 
-    <!-- HERO SECTION -->
-    <section class="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 text-white py-20 lg:py-32">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
-                Hire top-tier academic experts for any educational project.
-            </h1>
-            <p class="text-lg sm:text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
-                Connect with verified tutors, curriculum designers, and educational content creators worldwide.
-            </p>
-            
-            <!-- Search Bar Form -->
-            <form class="bg-white p-2 rounded-xl shadow-lg max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-2">
-                <div class="flex items-center flex-1 w-full px-3 text-gray-500">
-                    <i class="fa-solid fa-magnifying-glass mr-2"></i>
-                    <input type="text" placeholder="Search 'Calculus Tutor' or 'Curriculum Developer'..." class="w-full py-2 bg-transparent text-gray-800 focus:outline-none" required>
-                </div>
-                <button type="submit" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition shrink-0">
-                    Search Experts
-                </button>
-            </form>
-        </div>
-    </section>
+  <!-- HOME -->
+  <section class="page" id="home" role="tabpanel">
+    <div class="hero">
+      <div class="hero-copy">
+        <h1>Education, crafted with care</h1>
+        <p>Personal tutoring, exam coaching and career guidance for school and college students, led by mentors who teach with patience and precision.</p>
+        <a class="btn" href="#courses" data-go="courses">View courses</a>
+        <a class="btn ghost" href="#contact" data-go="contact">Book a consultation</a>
+      </div>
+      <aside class="hero-side">
+        <h3>Programmes</h3>
+        <ul>
+          <li><b>Classes 1–5</b><span>Foundation</span></li>
+          <li><b>Classes 6–10</b><span>School success</span></li>
+          <li><b>Classes 11–12</b><span>Senior secondary</span></li>
+          <li><b>Entrance</b><span>Competitive exams</span></li>
+        </ul>
+        <div class="big">95%<span>of our students meet or beat their target grade</span></div>
+      </aside>
+    </div>
 
-    <!-- CORE CATEGORIES SECTION -->
-    <section id="browse" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900">Explore Educational Specialties</h2>
-            <p class="text-gray-600 mt-2">Get specialized help across all domains of learning.</p>
-        </div>
+    <div class="numbers">
+      <div><b>5,000+</b><span>students taught</span></div>
+      <div><b>40+</b><span>expert mentors</span></div>
+      <div><b>12</b><span>years of teaching</span></div>
+      <div><b>1:8</b><span>mentor to student ratio</span></div>
+    </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Card 1 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
-                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
-                    <i class="fa-solid fa-book-open w-full text-center"></i>
-                </div>
-                <h3 class="font-bold text-lg mb-1">1-on-1 Online Tutoring</h3>
-                <p class="text-sm text-gray-500">Math, Sciences, Languages & Test Prep.</p>
-            </div>
-            <!-- Card 2 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
-                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
-                    <i class="fa-solid fa-pen-nib w-full text-center"></i>
-                </div>
-                <h3 class="font-bold text-lg mb-1">Curriculum Design</h3>
-                <p class="text-sm text-gray-500">Syllabus crafting & lesson plan development.</p>
-            </div>
-            <!-- Card 3 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
-                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
-                    <i class="fa-solid fa-file-invoice w-full text-center"></i>
-                </div>
-                <h3 class="font-bold text-lg mb-1">Academic Writing</h3>
-                <p class="text-sm text-gray-500">Research assistance, proofreading & editing.</p>
-            </div>
-            <!-- Card 4 -->
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
-                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
-                    <i class="fa-solid fa-laptop-code w-full text-center"></i>
-                </div>
-                <h3 class="font-bold text-lg mb-1">EdTech Development</h3>
-                <p class="text-sm text-gray-500">LMS integration & e-learning software build outs.</p>
-            </div>
-        </div>
-    </section>
+    <div class="split">
+      <h2>How we teach</h2>
+      <div class="rows">
+        <div class="row"><h3>Small batches</h3><p>No more than eight students per mentor, so every question gets answered.</p></div>
+        <div class="row"><h3>Honest progress reports</h3><p>Regular tests and clear feedback shared with parents each month.</p></div>
+        <div class="row"><h3>Flexible learning</h3><p>Classroom or online, with recorded sessions for revision.</p></div>
+      </div>
+    </div>
 
-    <!-- TRUST INFOGRAPHIC SECTION -->
-    <section id="how-it-works" class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">How EduLance Works</h2>
-                <p class="text-gray-600 mt-2">Simple milestones designed to accelerate academic success.</p>
-            </div>
+    <div class="statement">
+      <h2>Begin with a free demo class</h2>
+      <div>
+        <p>Meet your mentor, try a lesson and see if we are the right fit. No commitment.</p>
+        <a class="btn" href="#contact" data-go="contact">Book a demo</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <div class="text-3xl font-extrabold text-indigo-600 mb-2">01</div>
-                    <h3 class="font-bold text-xl mb-2">Post an Academic Project</h3>
-                    <p class="text-gray-600 text-sm max-w-xs mx-auto">Detail your needs—from specific homework help tasks to long-term digital course creation.</p>
-                </div>
-                <div>
-                    <div class="text-3xl font-extrabold text-indigo-600 mb-2">02</div>
-                    <h3 class="font-bold text-xl mb-2">Review Vetted Proposals</h3>
-                    <p class="text-gray-600 text-sm max-w-xs mx-auto">Compare matching educational professionals based on credentials, degrees, and user reviews.</p>
-                </div>
-                <div>
-                    <div class="text-3xl font-extrabold text-indigo-600 mb-2">03</div>
-                    <h3 class="font-bold text-xl mb-2">Secure & Seamless Payment</h3>
-                    <p class="text-gray-600 text-sm max-w-xs mx-auto">Funds are held safely in escrow and are released only when you are 100% satisfied with the work.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ABOUT -->
+  <section class="page" id="about" role="tabpanel">
+    <div class="page-head">
+      <h2>About us</h2>
+      <p>Olive &amp; Oak Academy was founded on a simple idea: students learn best when teaching is personal, unhurried and honest.</p>
+    </div>
+    <div class="panels">
+      <div class="panel p-sage"><h3>Mission</h3><p>To make learning clear, confident and rewarding for every student.</p></div>
+      <div class="panel p-mid"><h3>Vision</h3><p>Quality education within reach of every family, in person or online.</p></div>
+      <div class="panel p-olive"><h3>Values</h3><p>Care, integrity and steady effort, shown in every class we teach.</p></div>
+    </div>
+    <div class="split" style="margin-top:72px">
+      <h2>Why families choose us</h2>
+      <ul class="ticks">
+        <li>Qualified, background-verified mentors</li>
+        <li>Monthly tests with written progress reports</li>
+        <li>Weekly doubt-clearing sessions</li>
+        <li>Flexible timings and recorded classes</li>
+      </ul>
+    </div>
+    <blockquote>“My daughter used to dread maths. Now she explains the solutions to me at home.”<cite>Parent of a Class 8 student</cite></blockquote>
+  </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-gray-400 py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-2 text-white">
-                <i class="fa-solid fa-graduation-cap text-indigo-400 text-2xl"></i>
-                <span class="text-lg font-bold">EduLance</span>
-            </div>
-            <p class="text-sm">&copy; 2026 EduLance Inc. Open source template under MIT License.</p>
-            <div class="flex space-x-6">
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
-                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-            </div>
-        </div>
-    </footer>
+  <!-- COURSES -->
+  <section class="page" id="courses" role="tabpanel">
+    <div class="page-head">
+      <h2>Courses</h2>
+      <p>Choose a programme by grade or goal. Every course includes notes, practice tests and mentor support.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><div><h3>Foundation Builders</h3><small>Classes 1–5</small></div><p>English, maths and EVS taught through activities, stories and hands-on practice.</p></div>
+      <div class="row"><div><h3>School Success</h3><small>Classes 6–10</small></div><p>Maths, science, social science and languages, aligned to your board syllabus.</p></div>
+      <div class="row"><div><h3>Senior Secondary</h3><small>Classes 11–12</small></div><p>Physics, chemistry, maths, biology, commerce and humanities with exam strategy.</p></div>
+      <div class="row"><div><h3>Competitive Exams</h3><small>Entrance preparation</small></div><p>Focused coaching with timed mock tests and detailed performance analysis.</p></div>
+      <div class="row"><div><h3>Coding &amp; Digital Skills</h3><small>All ages</small></div><p>Scratch, Python, web basics and computer fundamentals for the modern student.</p></div>
+      <div class="row"><div><h3>Spoken English</h3><small>All ages</small></div><p>Fluency, confidence and interview-ready communication skills.</p></div>
+    </div>
+  </section>
 
+  <!-- SERVICES -->
+  <section class="page" id="services" role="tabpanel">
+    <div class="page-head">
+      <h2>Services</h2>
+      <p>Beyond the classroom, we support students and parents at every stage of the journey.</p>
+    </div>
+    <div class="panels">
+      <div class="panel wide p-olive"><h3>One-to-one tutoring</h3><p>A dedicated mentor and a pace set around your child, at home or online.</p></div>
+      <div class="panel wide p-sage"><h3>Career counselling</h3><p>Aptitude assessment, stream selection and college guidance from experienced counsellors.</p></div>
+      <div class="panel p-mid"><h3>Study abroad</h3><p>Country and course selection, applications and SOP review.</p></div>
+      <div class="panel p-cream"><h3>School workshops</h3><p>Talks and sessions on study skills and careers for your school.</p></div>
+      <div class="panel p-sage"><h3>Parent sessions</h3><p>Understand progress and learn how to support learning at home.</p></div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="page" id="resources" role="tabpanel">
+    <div class="page-head">
+      <h2>Resources</h2>
+      <p>Free material for students. Replace the links below with your own files or pages.</p>
+    </div>
+    <div class="rows">
+      <div class="row"><h3>Study notes</h3><p>Chapter summaries and formula sheets. <a href="#">Download notes</a></p></div>
+      <div class="row"><h3>Practice papers</h3><p>Previous-year and mock question papers. <a href="#">Get papers</a></p></div>
+      <div class="row"><h3>Video lessons</h3><p>Short explainers for tricky topics. <a href="#">Watch videos</a></p></div>
+      <div class="row"><h3>Blog &amp; tips</h3><p>Study plans, exam strategies and career news. <a href="#">Read the blog</a></p></div>
+    </div>
+    <div class="split" style="margin-top:72px">
+      <h2>Common questions</h2>
+      <div>
+        <details><summary>Do you offer a free demo class?</summary><p>Yes. Book one from the Contact page.</p></details>
+        <details><summary>Are classes online or offline?</summary><p>Both. Choose what works best for you.</p></details>
+        <details><summary>How are fees decided?</summary><p>By course, grade and batch type. Contact us for a quote.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="page" id="contact" role="tabpanel">
+    <div class="page-head">
+      <h2>Contact us</h2>
+      <p>Tell us what you need and we will reply within one working day.</p>
+    </div>
+    <div class="split" style="grid-template-columns:1.4fr 1fr">
+      <form id="contactForm">
+        <label>Your name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Interested in
+          <select name="topic"><option>Course enquiry</option><option>One-to-one tutoring</option><option>Career counselling</option><option>Free demo class</option><option>Other</option></select>
+        </label>
+        <label>Message<textarea name="message"></textarea></label>
+        <div><button class="btn" type="submit">Send message</button></div>
+        <p id="formMsg" role="status"></p>
+      </form>
+      <div>
+        <div class="info"><h3>Visit or call</h3><p>Olive &amp; Oak Academy<br>Your street, Your city<br>Phone: +00 00000 00000<br>Email: hello@yourdomain.com</p></div>
+        <div class="info"><h3>Opening hours</h3><p>Monday to Saturday: 9:00 am – 7:00 pm<br>Sunday: closed</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <b>Olive &amp; Oak Academy</b>
+  <p>© <span id="yr"></span> All rights reserved.</p>
+</footer>
+
+<script>
+const tabs = [...document.querySelectorAll('nav button')];
+const pages = [...document.querySelectorAll('section.page')];
+const names = pages.map(p => p.id);
+
+function show(id){
+  if(!names.includes(id)) id = 'home';
+  pages.forEach(p => p.classList.toggle('active', p.id === id));
+  tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === id));
+  window.scrollTo({top:0});
+  document.title = (id === 'home' ? 'Olive & Oak Academy' : id[0].toUpperCase() + id.slice(1) + ' – Olive & Oak Academy');
+}
+tabs.forEach(t => t.addEventListener('click', () => { location.hash = t.dataset.tab; }));
+document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); location.hash = a.dataset.go; }));
+window.addEventListener('hashchange', () => show(location.hash.slice(1)));
+show(location.hash.slice(1));
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('formMsg').textContent = 'Thank you. We have received your message.';
+  e.target.reset();
+});
+</script>
 </body>
 </html>
