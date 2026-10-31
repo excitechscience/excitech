@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLance | Connect with Expert Academic Freelancers</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://tailwindcss.com"></script>
+    <!-- FontAwesome for clean iconography -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAVIGATION BAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-graduation-cap text-indigo-600 text-3xl"></i>
+                <span class="text-xl font-bold text-gray-900 tracking-tight">EduLance</span>
+            </div>
+            
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="#browse" class="text-gray-600 hover:text-indigo-600 transition">Find Experts</a>
+                <a href="#how-it-works" class="text-gray-600 hover:text-indigo-600 transition">How it Works</a>
+                <a href="#become-freelancer" class="text-gray-600 hover:text-indigo-600 transition">Become a Tutor</a>
+            </nav>
+
+            <!-- Authentication Buttons -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-gray-600 hover:text-indigo-600 font-medium transition">Sign In</a>
+                <a href="#" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg font-medium shadow-sm transition">Join Free</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 text-white py-20 lg:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none mb-6">
+                Hire top-tier academic experts for any educational project.
+            </h1>
+            <p class="text-lg sm:text-xl text-indigo-200 mb-8 max-w-2xl mx-auto">
+                Connect with verified tutors, curriculum designers, and educational content creators worldwide.
+            </p>
+            
+            <!-- Search Bar Form -->
+            <form class="bg-white p-2 rounded-xl shadow-lg max-w-2xl mx-auto flex flex-col sm:flex-row items-center gap-2">
+                <div class="flex items-center flex-1 w-full px-3 text-gray-500">
+                    <i class="fa-solid fa-magnifying-glass mr-2"></i>
+                    <input type="text" placeholder="Search 'Calculus Tutor' or 'Curriculum Developer'..." class="w-full py-2 bg-transparent text-gray-800 focus:outline-none" required>
+                </div>
+                <button type="submit" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg transition shrink-0">
+                    Search Experts
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CORE CATEGORIES SECTION -->
+    <section id="browse" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">Explore Educational Specialties</h2>
+            <p class="text-gray-600 mt-2">Get specialized help across all domains of learning.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
+                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-book-open w-full text-center"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">1-on-1 Online Tutoring</h3>
+                <p class="text-sm text-gray-500">Math, Sciences, Languages & Test Prep.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
+                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-pen-nib w-full text-center"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Curriculum Design</h3>
+                <p class="text-sm text-gray-500">Syllabus crafting & lesson plan development.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
+                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-file-invoice w-full text-center"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">Academic Writing</h3>
+                <p class="text-sm text-gray-500">Research assistance, proofreading & editing.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition text-center cursor-pointer group">
+                <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-between justify-center text-indigo-600 text-xl mx-auto mb-4 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-laptop-code w-full text-center"></i>
+                </div>
+                <h3 class="font-bold text-lg mb-1">EdTech Development</h3>
+                <p class="text-sm text-gray-500">LMS integration & e-learning software build outs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST INFOGRAPHIC SECTION -->
+    <section id="how-it-works" class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">How EduLance Works</h2>
+                <p class="text-gray-600 mt-2">Simple milestones designed to accelerate academic success.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-extrabold text-indigo-600 mb-2">01</div>
+                    <h3 class="font-bold text-xl mb-2">Post an Academic Project</h3>
+                    <p class="text-gray-600 text-sm max-w-xs mx-auto">Detail your needs—from specific homework help tasks to long-term digital course creation.</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-indigo-600 mb-2">02</div>
+                    <h3 class="font-bold text-xl mb-2">Review Vetted Proposals</h3>
+                    <p class="text-gray-600 text-sm max-w-xs mx-auto">Compare matching educational professionals based on credentials, degrees, and user reviews.</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-indigo-600 mb-2">03</div>
+                    <h3 class="font-bold text-xl mb-2">Secure & Seamless Payment</h3>
+                    <p class="text-gray-600 text-sm max-w-xs mx-auto">Funds are held safely in escrow and are released only when you are 100% satisfied with the work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-gray-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2 text-white">
+                <i class="fa-solid fa-graduation-cap text-indigo-400 text-2xl"></i>
+                <span class="text-lg font-bold">EduLance</span>
+            </div>
+            <p class="text-sm">&copy; 2026 EduLance Inc. Open source template under MIT License.</p>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
