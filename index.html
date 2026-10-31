@@ -152,11 +152,18 @@
 <section class="alt" id="updates">
   <div class="wrap">
     <div class="sec-head"><h2>Updates</h2><p>Recent events and announcements from the academy.</p></div>
-    <div class="frame">
-      <div class="posters">
-        <img src="images/poster1.jpg" alt="Event poster 1" loading="lazy">
-        <img src="images/poster2.jpg" alt="Event poster 2" loading="lazy">
-        <img src="images/poster3.jpg" alt="Event poster 3" loading="lazy">
+    <div class="frame carousel" aria-roledescription="carousel" aria-label="Updates">
+      <div class="viewport">
+        <div class="track">
+          <figure class="slide"><img src="images/poster1.jpg" alt="Event poster 1" loading="lazy"></figure>
+          <figure class="slide"><img src="images/poster2.jpg" alt="Event poster 2" loading="lazy"></figure>
+          <figure class="slide"><img src="images/poster3.jpg" alt="Event poster 3" loading="lazy"></figure>
+        </div>
+      </div>
+      <div class="ctrl">
+        <button class="prev" aria-label="Previous update">&#8592;</button>
+        <div class="dots"></div>
+        <button class="next" aria-label="Next update">&#8594;</button>
       </div>
     </div>
   </div>
