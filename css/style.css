@@ -133,3 +133,4 @@ footer.site{background:#1f2614;color:rgba(246,242,230,.75);text-align:center;pad
   nav ul{flex-direction:column;padding:.8rem 4%}
 }
 @media (max-width:560px){.posters{grid-template-columns:1fr}.founder{grid-template-columns:1fr;justify-items:start}}
+.approach-full{margin-top:2.5rem;font-size:1.1rem;line-height:1.8;color:var(--muted);text-align:justify}
