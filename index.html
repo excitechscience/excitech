@@ -1,350 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ExciTech Science Academy – Where Concepts Become Confidence</title>
-<meta name="description" content="Concept-focused science tuition for Plus One, Plus Two and Classes 8–10, with course and career guidance. NEET, JEE, KEAM and IISER preparation.">
+<title>ExciTech Science Academy | Where Concepts Become Confidence</title>
+<meta name="description" content="Plus One & Plus Two science tuition, Classes 8–10 entrance foundation and career guidance at ExciTech Science Academy, Kunnathurmedu, Palakkad.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
-<style>
-:root{
-  --cream:#f6f1e4; --cream-deep:#ece4d0;
-  --sage:#aab99b; --sage-light:#dfe6d3; --sage-mid:#8fa17f;
-  --olive:#5d6a2b; --olive-deep:#363d1b; --ink:#262b14;
-  --line:rgba(54,61,27,.28);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Lato',system-ui,sans-serif;font-weight:400;color:var(--ink);background:var(--cream);line-height:1.75;font-size:17px}
-h1,h2,h3{font-family:'Bebas Neue',sans-serif;font-weight:400;letter-spacing:.04em;line-height:1.02;color:var(--olive-deep)}
-a{color:var(--olive)}
-:focus-visible{outline:3px solid var(--olive);outline-offset:4px}
-
-/* Header */
-header{position:sticky;top:0;z-index:10;background:var(--cream);border-bottom:1px solid var(--line)}
-.bar{max-width:1180px;margin:auto;padding:16px 28px;display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;justify-content:space-between}
-.logo{font-family:'Bebas Neue',sans-serif;font-size:1.9rem;letter-spacing:.08em;text-decoration:none;color:var(--olive-deep)}
-.logo small{font-family:'Lato',sans-serif;font-weight:300;font-size:.8rem;letter-spacing:.18em;margin-left:10px;color:var(--olive)}
-nav{display:flex;flex-wrap:wrap;gap:6px 28px}
-nav button{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.1em;background:none;border:0;border-bottom:2px solid transparent;color:var(--olive-deep);padding:4px 0;cursor:pointer;transition:border-color .2s,color .2s}
-nav button:hover{color:var(--olive)}
-nav button[aria-selected="true"]{border-bottom-color:var(--olive)}
-
-main{max-width:1180px;margin:auto;padding:0 28px 56px}
-section.page{display:none}
-section.page.active{display:block}
-section.page:not(#home){padding-top:48px}
-.page-head{padding:64px 0 36px;border-bottom:1px solid var(--line);margin-bottom:44px;display:grid;grid-template-columns:1fr 1fr;gap:20px 56px;align-items:end}
-.page-head h2{font-size:clamp(3rem,8vw,5.5rem)}
-.page-head p{font-weight:300;font-size:1.15rem;max-width:46ch}
-
-/* Hero */
-.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:0;margin:48px 0 64px;border:1px solid var(--line)}
-.hero-copy{padding:56px 48px}
-.hero h1{font-size:clamp(3.4rem,9vw,7rem);margin-bottom:22px}
-.hero p{font-weight:300;font-size:1.2rem;max-width:44ch;margin-bottom:32px}
-.btn{display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.12em;text-decoration:none;padding:12px 32px;background:var(--olive);color:var(--cream);border:1px solid var(--olive);cursor:pointer;transition:background .2s,color .2s}
-.btn:hover{background:var(--olive-deep);border-color:var(--olive-deep)}
-.btn.ghost{background:transparent;color:var(--olive-deep);border-color:var(--olive-deep);margin-left:10px}
-.btn.ghost:hover{background:var(--olive-deep);color:var(--cream)}
-.hero-side{background:var(--olive-deep);color:var(--cream);padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
-.hero-side h3{color:var(--sage);font-size:1.5rem}
-.hero-side ul{list-style:none}
-.hero-side li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(246,241,228,.2);font-weight:300}
-.hero-side li b{font-weight:700}
-.hero-side .big{font-family:'Bebas Neue',sans-serif;font-size:4.2rem;line-height:1;color:var(--sage-light)}
-.hero-side .big span{display:block;font-family:'Lato',sans-serif;font-size:.9rem;font-weight:300;letter-spacing:.04em;color:var(--cream)}
-
-/* Shared blocks */
-.numbers{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:72px;border-top:1px solid var(--line)}
-.numbers div{padding:26px 24px 8px 0}
-.numbers b{display:block;font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:3.4rem;line-height:1;color:var(--olive)}
-.numbers span{font-weight:300}
-.split{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;margin-bottom:72px}
-.split h2{font-size:clamp(2.4rem,5vw,3.6rem)}
-.rows{border-top:1px solid var(--line)}
-.row{display:grid;grid-template-columns:1.1fr 2fr;gap:8px 32px;padding:24px 0;border-bottom:1px solid var(--line)}
-.row h3{font-size:1.8rem}
-.row small{display:block;font-family:'Lato',sans-serif;font-weight:700;font-size:.85rem;letter-spacing:.05em;color:var(--olive);margin-top:4px}
-.row p{font-weight:300}
-.panels{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
-.panel{padding:34px 30px;grid-column:span 2}
-.panel.wide{grid-column:span 3}
-.panel h3{font-size:2rem;margin-bottom:10px}
-.panel p{font-weight:300}
-.p-sage{background:var(--sage-light)} .p-mid{background:var(--sage)} .p-olive{background:var(--olive);color:var(--cream)} .p-olive h3{color:var(--cream)} .p-cream{background:var(--cream-deep)}
-.statement{background:var(--olive-deep);color:var(--cream);padding:64px 48px;margin-top:72px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
-.statement h2{color:var(--cream);font-size:clamp(2.4rem,5vw,4rem)}
-.statement p{font-weight:300;margin-bottom:20px}
-.statement .btn{background:var(--sage);color:var(--olive-deep);border-color:var(--sage)}
-.statement .btn:hover{background:var(--cream);border-color:var(--cream)}
-blockquote{border-left:3px solid var(--olive);padding:6px 0 6px 28px;font-weight:300;font-style:italic;font-size:1.35rem;line-height:1.55}
-blockquote cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:.95rem}
-ul.ticks{list-style:none}
-ul.ticks li{padding:10px 0 10px 28px;border-bottom:1px solid var(--line);position:relative;font-weight:300}
-ul.ticks li::before{content:"";position:absolute;left:0;top:20px;width:12px;height:2px;background:var(--olive)}
-details{border-bottom:1px solid var(--line);padding:16px 0}
-summary{cursor:pointer;font-weight:700}
-details p{font-weight:300;margin-top:8px}
-.rows a{font-weight:700}
-
-/* Form */
-form{display:grid;gap:18px}
-label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
-input,select,textarea{font:inherit;font-weight:400;padding:13px 14px;border:1px solid var(--olive-deep);background:#fbf8ef;color:var(--ink);border-radius:0}
-textarea{min-height:130px;resize:vertical}
-#formMsg{font-weight:700;color:var(--olive);min-height:1.5em}
-.info{background:var(--sage-light);padding:32px}
-.info h3{font-size:1.9rem;margin-bottom:8px}
-.info + .info{margin-top:20px;background:var(--cream-deep)}
-
-footer{background:var(--olive-deep);color:var(--sage-light);text-align:center;padding:32px 28px;font-weight:300;font-size:.95rem}
-footer b{font-family:'Bebas Neue',sans-serif;font-weight:400;font-size:1.6rem;letter-spacing:.1em;color:var(--cream);display:block}
-
-
-/* ExciTech additions */
-.logo{display:flex;align-items:baseline}
-.brand-logo{display:block;width:min(340px,80%);margin:0 0 26px -8px;mix-blend-mode:multiply}
-.tagline{font-family:'Lato',sans-serif;font-weight:300;letter-spacing:.14em;font-size:.95rem;color:var(--olive);margin-bottom:26px}
-.hero h1{line-height:.95}
-.hero-art{background:var(--olive-deep);min-height:420px;position:relative}
-.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.media{width:100%;display:block;height:auto}
-.founder{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center;margin-bottom:72px}
-.founder h3{font-size:2.8rem}
-.founder .creds{font-weight:700;color:var(--olive);margin:6px 0 14px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.gallery figure{background:var(--cream-deep)}
-.gallery img{width:100%;height:420px;object-fit:cover;display:block}
-.gallery figcaption{padding:12px 16px;font-weight:300;font-size:.95rem}
-.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.review{padding:30px;background:var(--sage-light)}
-.review:nth-child(3n+2){background:var(--cream-deep)}
-.review:nth-child(3n){background:var(--sage)}
-.review p{font-weight:300;font-style:italic;font-size:1.1rem;line-height:1.6}
-.review cite{display:block;margin-top:14px;font-style:normal;font-weight:700}
-.ticker{margin-bottom:64px;background:var(--olive-deep);color:var(--cream);overflow:hidden;border-block:1px solid var(--olive)}
-.ticker-track{display:flex;width:max-content;animation:run 30s linear infinite}
-.ticker:hover .ticker-track,.ticker:focus-within .ticker-track{animation-play-state:paused}
-.ticker-group{display:flex;flex-shrink:0}
-.ticker-group a{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.7rem,3.4vw,2.4rem);letter-spacing:.1em;padding:16px 0;color:inherit;text-decoration:none;white-space:nowrap}
-.ticker-group a::after{content:"";margin:0 48px}
-@keyframes run{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ticker{overflow-x:auto}.ticker-track{animation:none}}
-.logo-img{display:block;height:46px;width:auto}
-.brand-logo{width:min(380px,85%)!important;mix-blend-mode:normal!important}
-.books{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.book{border:1px solid var(--olive-deep);background:var(--sage-light);padding:14px}
-.book img,.frame img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-.note{margin-top:32px;font-family:'Bebas Neue',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:.06em;color:var(--olive-deep);text-align:center}
-.frame{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:18px;border:1px solid var(--olive-deep);background:var(--cream-deep)}
-.insta{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;background:var(--olive-deep);color:var(--cream);padding:36px 40px}
-.insta svg{color:var(--sage);flex-shrink:0}
-.insta h3{color:var(--cream);font-size:2.2rem}
-.insta p{font-weight:300}
-.insta>div{flex:1 1 260px}
-.insta .btn{background:var(--sage);color:var(--olive-deep);border-color:var(--sage)}
-.insta .btn:hover{background:var(--cream);border-color:var(--cream)}
-footer{padding:26px 28px}
-@media (max-width:700px){.books{grid-template-columns:1fr}.frame{gap:8px;padding:10px}.insta{padding:28px}}
-.hero-art img:nth-child(2){opacity:0;animation:swap 10s ease-in-out infinite}
-@keyframes swap{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}
-.sub{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:28px}
-@media (prefers-reduced-motion:reduce){.hero-art img:nth-child(2){animation:none}}
-@media (max-width:860px){.founder{grid-template-columns:1fr}.hero-art{min-height:320px}}
-@media (max-width:860px){
-  .hero,.split,.statement,.page-head{grid-template-columns:1fr}
-  .hero-copy{padding:36px 26px}
-  .row{grid-template-columns:1fr}
-  .panels{grid-template-columns:1fr}
-  .panel,.panel.wide{grid-column:auto}
-  .btn.ghost{margin:12px 0 0}
-  .page-head{padding-top:40px}
-}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <div class="bar">
-    <a class="logo" href="#home" aria-label="ExciTech Science Academy home"><img class="logo-img" src="images/logo.png" alt="ExciTech Science Academy"></a>
-    <nav role="tablist" aria-label="Main pages">
-      <button role="tab" data-tab="home">Home</button>
-      <button role="tab" data-tab="expertise">Expertise &amp; FAQs</button>
-      <button role="tab" data-tab="reviews">Reviews</button>
-      <button role="tab" data-tab="products">Products</button>
-      <button role="tab" data-tab="updates">Updates</button>
-      <button role="tab" data-tab="contact">Contact</button>
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="ExciTech Science Academy home"><img src="images/logo.png" alt="ExciTech Science Academy"></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#expertise">Expertise &amp; FAQs</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#updates">Updates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- HOME -->
-  <section class="page" id="home" role="tabpanel">
-    <div class="hero">
-      <div class="hero-copy">
-        <img class="brand-logo" src="images/logo.png" alt="ExciTech Science Academy logo">
-        <h1>Where Concepts Become Confidence</h1>
-        <p class="tagline">SCIENCE · CLARITY · CONFIDENCE</p>
-        <a class="btn" href="#expertise" data-go="expertise">Our expertise</a>
-        <a class="btn ghost" href="#contact" data-go="contact">Get in touch</a>
+<!-- HOME -->
+<section id="home">
+  <div class="wrap hero">
+    <div>
+      <img class="hero-logo" src="images/logo.png" alt="ExciTech Science Academy">
+      <h1>Where Concepts Become Confidence</h1>
+      <p class="tag">Science tuition and career guidance for Plus One, Plus Two and entrance aspirants, in Kunnathurmedu, Palakkad.</p>
+      <div class="btns">
+        <a class="btn fill" href="tel:+916362737065">Book a call</a>
+        <a class="btn line" href="https://wa.me/916362737065">WhatsApp us</a>
       </div>
-      <div class="hero-art">
-        <img src="images/academy-wall.jpg" alt="ExciTech Science Academy emblem on the wall of a study room">
-        <img src="images/study-tablet.jpg" alt="Tablet showing the ExciTech Science Academy tagline Science, Clarity, Confidence">
-      </div>
+      <p class="sub">Science · Clarity · Confidence</p>
     </div>
+    <img class="hero-img" src="images/study-tablet.png" alt="Study desk with tablet">
+  </div>
+</section>
 
-    <div class="ticker" role="region" aria-label="Important notice">
-      <div class="ticker-track">
-        <div class="ticker-group"><a href="tel:+916362737065">Admission Open. Book a Call for Details: 6362737065</a><a href="tel:+916362737065">Admission Open. Book a Call for Details: 6362737065</a><a href="tel:+916362737065">Admission Open. Book a Call for Details: 6362737065</a><a href="tel:+916362737065">Admission Open. Book a Call for Details: 6362737065</a></div>
-        <div class="ticker-group" aria-hidden="true"><a href="tel:+916362737065" tabindex="-1">Admission Open. Book a Call for Details: 6362737065</a><a href="tel:+916362737065" tabindex="-1">Admission Open. Book a Call for Details: 6362737065</a><a href="tel:+916362737065" tabindex="-1">Admission Open. Book a Call for Details: 6362737065</a><a href="tel:+916362737065" tabindex="-1">Admission Open. Book a Call for Details: 6362737065</a></div>
-      </div>
-    </div>
+<div class="ticker" aria-label="Admission Open. Book a Call for Details. 6362737065">
+  <div class="ticker-track" aria-hidden="true">
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+    <span>Admission Open. Book a Call for Details. 6362737065</span>
+  </div>
+</div>
 
-    <div class="split">
-      <h2>Our approach</h2>
-      <div>
-        <p style="margin-bottom:18px">ExciTech Science Academy delivers concept-focused science education that builds clarity, confidence, and academic excellence. Through personalised teaching, strong scientific foundations, and problem-solving practice, students are prepared for board examinations and competitive entrance tests.</p>
-        <p>Expert guidance in course selection, scholarships, higher education, and career planning empowers every student to make informed decisions and achieve their academic goals.</p>
-      </div>
+<section class="alt" id="approach">
+  <div class="wrap">
+    <div class="sec-head"><h2>Our approach</h2><p>Every student learns differently. We start with the concept, then build the confidence to apply it.</p></div>
+    <div class="pillars">
+      <div class="pillar"><h3>Science</h3><p>Strong fundamentals in Physics, Chemistry, Maths and Biology, taught from first principles.</p></div>
+      <div class="pillar"><h3>Clarity</h3><p>Clear explanations, regular practice and doubt clearing until each idea makes sense.</p></div>
+      <div class="pillar"><h3>Confidence</h3><p>Exam readiness and career guidance so students step forward with a plan.</p></div>
     </div>
+  </div>
+</section>
 
+<!-- EXPERTISE & FAQS -->
+<section id="expertise">
+  <div class="wrap">
+    <div class="sec-head"><h2>What we offer</h2><p>Focused programmes for school science and competitive entrance exams.</p></div>
+    <div class="offer">
+      <div><h3>Plus One &amp; Plus Two Science</h3><p>Complete tuition for the higher secondary science syllabus.</p></div>
+      <div><h3>Classes 8–10 Foundation</h3><p>An entrance foundation that builds early strength in science and maths.</p></div>
+      <div><h3>Course &amp; Career Guidance</h3><p>Personalised advice on courses, colleges and career paths.</p></div>
+      <div><h3>Entrance Preparation</h3><p>Structured preparation for the exams that open the next door.</p></div>
+    </div>
+    <div class="chips"><span>NEET</span><span>JEE</span><span>KEAM</span><span>IISER</span></div>
+  </div>
+</section>
 
-  </section>
+<section class="dark" id="founder">
+  <div class="wrap founder">
+    <img class="founder-photo" src="images/founder.jpg" alt="Dr. Abdul Azeez">
+    <div>
+      <h2>Founder &amp; Director</h2>
+      <h3 style="margin-top:1.4rem">Dr. Abdul Azeez</h3>
+      <p class="role">M.Sc., NET, Ph.D. · Alumnus of NIT Calicut</p>
+      <p>Dr. Abdul Azeez leads ExciTech Science Academy with a simple belief: students do their best when they understand the concept, not just the answer.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- EXPERTISE & FAQS -->
-  <section class="page" id="expertise" role="tabpanel">
-    <div class="split">
-      <h2>What we offer</h2>
-      <div class="rows">
-        <div class="row" style="grid-template-columns:1fr"><h3>Plus One &amp; Plus Two Science Tuition</h3></div>
-        <div class="row" style="grid-template-columns:1fr"><h3>Classes 8–10 Entrance Foundation</h3></div>
-        <div class="row" style="grid-template-columns:1fr"><h3>Personalised Course &amp; Career Guidance</h3></div>
-        <div class="row" style="grid-template-columns:1fr"><h3>NEET, JEE, KEAM &amp; IISER Preparation</h3></div>
-      </div>
+<section id="faqs">
+  <div class="wrap">
+    <div class="sec-head"><h2>FAQs</h2></div>
+    <div class="faq">
+      <details><summary>Which classes do you teach?</summary><p>Plus One and Plus Two science, plus an entrance foundation for Classes 8–10.</p></details>
+      <details><summary>Do you prepare students for entrance exams?</summary><p>Yes. We prepare students for NEET, JEE, KEAM and IISER.</p></details>
+      <details><summary>Do you offer career guidance?</summary><p>Yes. We give personalised course and career guidance to students and parents.</p></details>
+      <details><summary>How do I enrol?</summary><p>Admissions are open. Call or WhatsApp 6362737065 and we will share the details.</p></details>
     </div>
-    <h2 class="sub">Founder &amp; Director</h2>
-    <div class="founder">
-      <img class="media" src="images/founder-plaque.jpg" alt="Plaque showing Dr. Abdul Azeez, Founder and Director of ExciTech Science Academy">
-      <div>
-        <h3>Dr. Abdul Azeez</h3>
-        <p class="creds">M.Sc., NET, Ph.D. · Alumnus, NIT Calicut</p>
-        <p>ExciTech Science Academy is led by its founder and director, who guides every student towards strong concepts and sound decisions about their studies and careers.</p>
-      </div>
-    </div>
-    <div class="panels">
-      <div class="panel p-sage"><h3>Science</h3><p>Strong scientific foundations in Physics, Chemistry, Mathematics and Biology.</p></div>
-      <div class="panel p-mid"><h3>Clarity</h3><p>Concept-focused, personalised teaching that makes complex topics simple.</p></div>
-      <div class="panel p-olive"><h3>Confidence</h3><p>Regular problem-solving practice that prepares students for boards and entrance tests.</p></div>
-    </div>
-    <div class="split" style="margin-top:72px">
-      <h2>Frequently asked questions</h2>
-      <div>
-        <details><summary>Which classes do you teach?</summary><p>Plus One and Plus Two science tuition, and an entrance foundation programme for Classes 8–10.</p></details>
-        <details><summary>Do you prepare students for entrance exams?</summary><p>Yes. We prepare students for NEET, JEE, KEAM and IISER.</p></details>
-        <details><summary>Do you help with course and career choices?</summary><p>Yes. We guide students on course selection, scholarships, higher education and career planning.</p></details>
-        <details><summary>How is your teaching different?</summary><p>We focus on concepts first, with personalised teaching, strong scientific foundations and regular problem-solving practice.</p></details>
-        <details><summary>How do I get admission, fee and timing details?</summary><p>Admissions are open. Please book a call from the Contact page and we will share the details.</p></details>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- REVIEWS -->
-  <section class="page" id="reviews" role="tabpanel">
+<!-- REVIEWS -->
+<section class="alt" id="reviews">
+  <div class="wrap">
+    <div class="sec-head"><h2>Reviews</h2><p>What students and parents say about learning with us.</p></div>
     <div class="reviews">
-      <div class="review"><p>“ExciTech Academy has really helped me understand the complex topics in Physics and Chemistry in a simple way. In just one month, I have seen great results in my problem-solving skills and conceptual understanding.”</p><cite>Naveed (Indian School, Oman)</cite></div>
-      <div class="review"><p>“We r very satisfied about the classes. 100% ok. Our son more improved. Thank u for the support”</p><cite>A Parent</cite></div>
-      <div class="review"><p>“I'm satisfied about the class... Very effective class. All the lessons understanding easily”</p><cite>Sreeram Saji</cite></div>
-      <div class="review"><p>“Well Teaching and superb experience”</p><cite>Aneesh Alphonz</cite></div>
-      <div class="review"><p>“Learning becomes easier when you have the right teacher. 🤍 A wonderful tuition centre with great guidance, support, and a positive atmosphere”</p><cite>Sadhiya</cite></div>
+      <div class="review"><div class="stars" aria-label="5 stars">★★★★★</div><p>Add a student or parent review here.</p><footer>Name, Class</footer></div>
+      <div class="review"><div class="stars" aria-label="5 stars">★★★★★</div><p>Add a student or parent review here.</p><footer>Name, Class</footer></div>
+      <div class="review"><div class="stars" aria-label="5 stars">★★★★★</div><p>Add a student or parent review here.</p><footer>Name, Class</footer></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PRODUCTS -->
-  <section class="page" id="products" role="tabpanel">
-    <div class="books">
-      <figure class="book"><img src="images/book-1.jpg" alt="ExciTech recent book 1" loading="lazy"></figure>
-      <figure class="book"><img src="images/book-2.jpg" alt="ExciTech recent book 2" loading="lazy"></figure>
-      <figure class="book"><img src="images/book-3.jpg" alt="ExciTech recent book 3" loading="lazy"></figure>
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="wrap">
+    <div class="sec-head"><h2>Products</h2><p>Our recent books, written to make concepts easier to learn.</p></div>
+    <div class="frame carousel" aria-roledescription="carousel" aria-label="Our books">
+      <div class="viewport">
+        <div class="track" id="track">
+          <figure class="slide"><img src="images/book1.jpg" alt="Book 1"><figcaption>Book 1</figcaption></figure>
+          <figure class="slide"><img src="images/book2.jpg" alt="Book 2"><figcaption>Book 2</figcaption></figure>
+          <figure class="slide"><img src="images/book3.jpg" alt="Book 3"><figcaption>Book 3</figcaption></figure>
+        </div>
+      </div>
+      <div class="ctrl">
+        <button id="prev" aria-label="Previous book">&#8592;</button>
+        <div class="dots" id="dots"></div>
+        <button id="next" aria-label="Next book">&#8594;</button>
+      </div>
     </div>
     <p class="note">For more details and pricing, call or WhatsApp us.</p>
-  </section>
+  </div>
+</section>
 
-  <!-- UPDATES -->
-  <section class="page" id="updates" role="tabpanel">
-    <div class="frame" aria-label="Event posters">
-      <figure><img src="foundation.png" alt="Foundation Course" loading="lazy"></figure>
-      <figure><img src="extesa.png" alt="ExTeSA 2027" loading="lazy"></figure>
-      <figure><img src="quest.png" alt="ExciQuest" loading="lazy"></figure>
-    </div>
-    <div class="panels" style="margin-top:40px">
-      <div class="panel wide p-olive"><h3>Admission Open</h3><p>Admissions are now open. Book a call for details.</p><p style="margin-top:16px"><a class="btn" style="background:var(--sage);color:var(--olive-deep);border-color:var(--sage)" href="#contact" data-go="contact">Book a call</a></p></div>
-      <div class="panel wide p-sage"><h3>ExciQuest'26</h3><p>PhD Anniversary Celebration &amp; Career Guidance Talk at ExciTech Science Academy, Kunnathurmedu, Palakkad. Date to be announced soon.</p></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="page" id="contact" role="tabpanel">
-    <div class="split" style="grid-template-columns:1.4fr 1fr">
-      <form id="contactForm">
-        <label>Your name<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>Interested in
-          <select name="topic"><option>Plus One &amp; Plus Two Science Tuition</option><option>Classes 8–10 Entrance Foundation</option><option>Course &amp; Career Guidance</option><option>NEET / JEE / KEAM / IISER preparation</option><option>Other</option></select>
-        </label>
-        <label>Message<textarea name="message"></textarea></label>
-        <div><button class="btn" type="submit">Send message</button></div>
-        <p id="formMsg" role="status"></p>
-      </form>
-      <div>
-        <div class="info"><h3>Visit or call</h3><p>Second Floor<br>Capital Tower<br>Kunnathurmedu, Palakkad, Keralam<br>Phone / WhatsApp: 6362737065<br>Email: excitechacademy@gmail.com</p></div>
-        <div class="info"><h3>Class timings</h3><p>Morning, Evening, and Weekend Batches Available</p></div>
+<!-- UPDATES -->
+<section class="alt" id="updates">
+  <div class="wrap">
+    <div class="sec-head"><h2>Updates</h2><p>Recent events and announcements from the academy.</p></div>
+    <div class="frame">
+      <div class="posters">
+        <img src="images/poster1.jpg" alt="Event poster 1" loading="lazy">
+        <img src="images/poster2.jpg" alt="Event poster 2" loading="lazy">
+        <img src="images/poster3.jpg" alt="Event poster 3" loading="lazy">
       </div>
     </div>
-    <div class="insta">
-      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></svg>
-      <div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="dark" id="contact">
+  <div class="wrap">
+    <div class="sec-head"><h2>Contact</h2></div>
+    <div class="contact">
+      <dl>
+        <div><dt>Call or WhatsApp</dt><dd><a href="tel:+916362737065">6362737065</a></dd></div>
+        <div><dt>Address</dt><dd>ExciTech Science Academy, Kunnathurmedu, Palakkad, Kerala</dd></div>
+      </dl>
+      <div class="insta">
         <h3>Follow us on Instagram</h3>
-        <p>Join our community for the latest posts, events and announcements.</p>
+        <p>See classes, events and student success stories.</p>
+        <a class="btn light" href="https://www.instagram.com/" target="_blank" rel="noopener">Open Instagram</a>
       </div>
-      <a class="btn" href="https://www.instagram.com/excitech_science/" target="_blank" rel="noopener">@excitech_science</a>
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
-<footer>
-  <p>ExciTech Science Academy © 2026 All rights reserved.</p>
-</footer>
+<footer class="site">ExciTech Science Academy © 2026 All rights reserved.</footer>
 
-<script>
-const tabs = [...document.querySelectorAll('nav button')];
-const pages = [...document.querySelectorAll('section.page')];
-const names = pages.map(p => p.id);
-
-function show(id){
-  if(!names.includes(id)) id = 'home';
-  pages.forEach(p => p.classList.toggle('active', p.id === id));
-  tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.tab === id));
-  window.scrollTo({top:0});
-  document.title = (id === 'home' ? 'ExciTech Science Academy' : tabs.find(t => t.dataset.tab === id).textContent + ' – ExciTech Science Academy');
-}
-tabs.forEach(t => t.addEventListener('click', () => { location.hash = t.dataset.tab; }));
-document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); location.hash = a.dataset.go; }));
-window.addEventListener('hashchange', () => show(location.hash.slice(1)));
-show(location.hash.slice(1));
-
-document.getElementById('contactForm').addEventListener('submit', e => {
-  e.preventDefault();
-  document.getElementById('formMsg').textContent = 'Thank you. We have received your message.';
-  e.target.reset();
-});
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
