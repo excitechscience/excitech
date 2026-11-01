@@ -22,7 +22,7 @@ section{padding:4rem 0}
 .dark h2,.dark h3{color:var(--cream)}
 
 /* hero */
-#home{padding-top:3rem;padding-bottom:4rem;background:
+#home{padding-top:3rem;padding-bottom:2rem;background:
   radial-gradient(900px 500px at 85% 10%,var(--sage-light),transparent 70%),var(--cream)}
 .hero{display:block;width:min(1400px,94%)}
 .hero-text{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
