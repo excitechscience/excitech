@@ -64,6 +64,7 @@ section{padding:4rem 0}
 .founder h3{font-size:2.4rem}
 .founder .role{color:var(--sage);font-weight:700;margin:.4rem 0 1.2rem}
 .founder p{color:rgba(246,242,230,.85);max-width:56ch}
+.founder p:not(.role) + p{margin-top:1.2rem}
 
 .faq{max-width:780px}
 details{border-bottom:1px solid rgba(77,90,47,.25)}
