@@ -54,6 +54,8 @@ section{padding:4rem 0}
 .offer{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .offer div{padding:1.6rem;border-left:4px solid var(--sage);background:var(--cream);border-radius:0 12px 12px 0}
 .offer p{color:var(--muted);margin-top:.4rem}
+#expertise .sec-head{max-width:none}
+#expertise .sec-head p{text-align:justify;line-height:1.8}
 
 /* founder & director: full-width, exactly 50% photo / 50% content */
 #founder{padding:0}
