@@ -14,7 +14,7 @@ h3{font-size:1.6rem}
 .wrap{width:min(1120px,92%);margin-inline:auto}
 
 /* sections */
-section{padding:6rem 0}
+section{padding:4rem 0}
 .sec-head{max-width:640px;margin-bottom:3rem}
 .sec-head p{color:var(--muted);margin-top:.8rem;font-size:1.05rem}
 .alt{background:var(--paper)}
