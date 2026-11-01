@@ -24,12 +24,12 @@ section{padding:6rem 0}
 /* hero */
 #home{padding-top:3rem;padding-bottom:4rem;background:
   radial-gradient(900px 500px at 85% 10%,var(--sage-light),transparent 70%),var(--cream)}
-.hero{display:block}
+.hero{display:block;width:min(1400px,94%)}
 .hero-text{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
 .hero-logo{width:min(260px,60%);margin-bottom:1.2rem}
-.hero h1{font-size:clamp(2.4rem,4.6vw,4.6rem);color:var(--olive)}
+.hero h1{font-size:clamp(2.4rem,7vw,6.5rem);color:var(--olive)}
 .hero h1 span{display:block;white-space:nowrap}
-.hero .tag{font-size:1.15rem;color:var(--muted);margin:1.2rem 0 2rem;max-width:64ch}
+.hero .tag{font-size:1.15rem;color:var(--muted);margin:1.2rem 0 2rem;max-width:none}
 .hero .sub{font-weight:700;color:var(--gold);letter-spacing:.12em;font-size:.9rem;margin-top:1.6rem}
 .btns{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
 .btn{display:inline-block;text-decoration:none;font-weight:700;padding:.9rem 1.7rem;border-radius:999px;border:2px solid var(--olive);transition:transform .2s,background .2s,color .2s}
@@ -54,8 +54,6 @@ section{padding:6rem 0}
 .offer{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .offer div{padding:1.6rem;border-left:4px solid var(--sage);background:var(--cream);border-radius:0 12px 12px 0}
 .offer p{color:var(--muted);margin-top:.4rem}
-.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
-.chips span{background:var(--olive);color:var(--cream);padding:.4rem 1rem;border-radius:999px;font-weight:700;font-size:.9rem}
 
 /* founder & director: full-width, exactly 50% photo / 50% content */
 #founder{padding:0}
@@ -122,7 +120,7 @@ footer.site{background:#1f2614;color:rgba(246,242,230,.75);text-align:center;pad
   section{padding:4.5rem 0}
   #founder{padding:0}
   .founder{grid-template-columns:1fr;min-height:0}
-  .founder-media{aspect-ratio:4/5;max-height:75vh}
+  .founder-media{order:-1;aspect-ratio:4/5;max-height:75vh}
   .founder-body{padding:3rem 6%}
 }
 @media (max-width:560px){.posters{grid-template-columns:1fr}}
