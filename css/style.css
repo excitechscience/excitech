@@ -67,7 +67,8 @@ section{padding:4rem 0}
 #expertise{overflow-x:clip}
 #expertise .sec-head{max-width:none}
 /* intro text expands to the full screen width */
-#expertise .sec-head p{text-align:justify;line-height:1.8;width:100vw;margin-left:calc(50% - 50vw);padding:0 3vw}
+#expertise .sec-head p{text-align:left;line-height:1.8;width:100vw;margin-left:calc(50% - 50vw);padding:0 3vw}
+#expertise .sec-head p span{display:block}
 
 /* founder & director: full-width, exactly 50% photo / 50% content */
 #founder{padding:0}
