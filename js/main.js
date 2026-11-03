@@ -46,3 +46,14 @@ document.querySelectorAll('.carousel').forEach(car => {
 
   go(0); play();
 });
+/* scroll reveal */
+(function(){
+  document.documentElement.classList.add('js');
+  const items=document.querySelectorAll('.sec-head,.approach-text,.pillar,.offer>div,.review,.faq,.c-card,.insta');
+  items.forEach(el=>el.classList.add('reveal'));
+  if(!('IntersectionObserver' in window)){items.forEach(el=>el.classList.add('in'));return;}
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.15});
+  items.forEach(el=>io.observe(el));
+})();
