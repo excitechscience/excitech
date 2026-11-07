@@ -57,3 +57,17 @@ document.querySelectorAll('.carousel').forEach(car => {
   },{threshold:.15});
   items.forEach(el=>io.observe(el));
 })();
+(function () {
+  const btn = document.getElementById('tbMenu');
+  const nav = document.getElementById('tbNav');
+  if (!btn || !nav) return;
+
+  function setOpen(open) {
+    nav.hidden = !open;
+    btn.setAttribute('aria-expanded', open);
+  }
+  btn.addEventListener('click', e => { e.stopPropagation(); setOpen(nav.hidden); });
+  nav.addEventListener('click', e => { if (e.target.tagName === 'A') setOpen(false); });
+  document.addEventListener('click', e => { if (!nav.contains(e.target)) setOpen(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setOpen(false); });
+})();
