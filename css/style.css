@@ -232,3 +232,22 @@ footer.site{background:#1f2614;color:rgba(246,242,230,.75);text-align:center;pad
   .hero-orbs i,.hero-logo,.hero h1 span,.hero .tag,.home-block{animation:none!important}
   .js .reveal{opacity:1;transform:none;transition:none}
 }
+/* top bar */
+html{scroll-padding-top:42px}
+.topbar{position:sticky;top:0;z-index:1000;background:var(--olive-dark);color:var(--cream)}
+.topbar-in{display:flex;align-items:center;justify-content:space-between;
+  width:min(1120px,94%);margin-inline:auto;height:40px}
+.tb-phone{display:flex;align-items:center;gap:.45rem;text-decoration:none;
+  font-weight:700;font-size:.9rem;letter-spacing:.06em;color:var(--cream)}
+.tb-phone:hover{color:var(--gold)}
+.tb-right{display:flex;align-items:center;gap:.25rem}
+.tb-ico{display:grid;place-items:center;width:34px;height:34px;border:0;border-radius:50%;
+  background:none;color:var(--cream);cursor:pointer;text-decoration:none;transition:background .2s,color .2s}
+.tb-ico:hover{background:rgba(246,242,230,.15);color:var(--gold)}
+
+.tb-nav{position:absolute;right:3%;top:100%;min-width:200px;display:flex;flex-direction:column;
+  background:var(--olive-dark);border:1px solid rgba(246,242,230,.18);border-top:0;
+  border-radius:0 0 12px 12px;padding:.4rem 0;box-shadow:0 18px 30px -12px rgba(0,0,0,.5)}
+.tb-nav[hidden]{display:none}
+.tb-nav a{padding:.65rem 1.3rem;text-decoration:none;color:var(--cream);font-weight:700;font-size:.95rem}
+.tb-nav a:hover{background:rgba(246,242,230,.1);color:var(--gold)}
