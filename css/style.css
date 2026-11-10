@@ -151,7 +151,9 @@ a.c-card:hover{transform:translateY(-4px);background:rgba(246,242,230,.13);borde
   height:auto;
   max-height:110px;
   object-fit:contain;
-  margin-top:.6rem;
+  margin-top:.6rembackground:var(--cream);
+  padding:.6rem;
+  border-radius:12px;
 }
 
 footer.site{background:#1f2614;color:rgba(246,242,230,.75);text-align:center;padding:1.6rem 1rem;font-size:.9rem}
