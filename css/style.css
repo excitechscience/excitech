@@ -146,14 +146,16 @@ a.c-card:hover{transform:translateY(-4px);background:rgba(246,242,230,.13);borde
 .btn.light{background:var(--cream);color:var(--olive-dark);border-color:var(--cream)}
 .btn.light:hover{background:var(--sage);border-color:var(--sage);transform:translateY(-2px)}
 .insta-logo{
-  width:auto;
+  align-self:stretch;
+  width:100%;
   max-width:100%;
   height:auto;
-  max-height:110px;
+  max-height:none;
   object-fit:contain;
-  margin-top:.6rembackground:var(--cream);
-  padding:.6rem;
-  border-radius:12px;
+  margin-top:.6rem;
+  background:var(--cream);
+  padding:1rem 1.2rem;
+  border-radius:14px;
 }
 
 footer.site{background:#1f2614;color:rgba(246,242,230,.75);text-align:center;padding:1.6rem 1rem;font-size:.9rem}
